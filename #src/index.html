@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<section class="introducing">
+				<div class="introducing__content _container">
+					<div class="introducing__content-titles">
+						<div class="introducing__slash">
+							introducing
+						</div>
+						<h1 class="introducing__title">
+							<span>Revolutionary</span> co-working space to realize your innovation
+						</h1>
+					</div>
+					<div class="introducing__text">
+						In frispes, we spearhead new initiatives and provide mentorship to a new startup, and help grow their
+						opportunities in key local, regional and global markets
+					</div>
+				</div>
+			</section>
+			<section class="selectbanner">
+				<div class="selectbanner__body ">
+					<div class="selectbanner__form _container">
+						<div class="selectbanner__form-title">
+							Find your space now
+						</div>
+						<form action="#" method="post">
+							<!-- <select name="" id="">
+								<option>Location</option>
+								<option disabled>Malang, Indonesia</option>
+							</select>
+							<select name="" id="">
+								<option>Location</option>
+								<option disabled>Malang, Indonesia</option>
+							</select>
+							<select name="" id="">
+								<option>Location</option>
+								<option disabled>Malang, Indonesia</option>
+							</select> -->
+							<button class="selectbanner__form-btn" type="submit">FIND MY SPACE</button>
+						</form>
+					</div>
+					<div class="selectbanner__banner"></div>
+				</div>
+				
+			</section>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>
