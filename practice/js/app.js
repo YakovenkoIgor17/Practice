@@ -122,12 +122,152 @@ let slider_about = new Swiper('.slider', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		draggable: true,
-		dragSize: 40
+		dragSize: 40,
 	},
 });
 function addZero(num) {
 	return (num > 9) ? num : '0' + num;
 }
+let arr = ['Spacious parking area', 'Comfortable spaces', 'Cozy cafe', 'Child playground', 'Outdoor spaces'];
+
+let slider_new = new Swiper('.ourfacilities__slider', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	autoHeight: true,
+	speed: 800,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	//Dotts
+	direction: 'vertical',
+	pagination: {
+		el: '.ourfacilities-swiper-pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (arr[index]) + '</span>';
+		}
+		// formatFractionCurrent: addZero,
+		// formatFractionTotal: addZero
+	},
+	//Arrows
+	// navigation: {
+	// 	nextEl: '.ourfacilities__swiper-button-prev',
+	// 	prevEl: '.ourfacilities__swiper-button-next',
+	// },
+	/*
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1268: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+	*/
+	// on: {
+	// 	lazyImageReady: function () {
+	// 		ibg();
+	// 	},
+	// },
+	// And if we need scrollbar
+	// scrollbar: {
+	// 	el: '.swiper-scrollbar',
+	// 	draggable: true,
+	// 	dragSize: 40
+	// },
+});
+
+let slider_new2 = new Swiper('.frispes_slider', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	autoHeight: true,
+	speed: 800,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	//Dotts
+	direction: "vertical",
+	pagination: {
+		el: '.ourfacilities-swiper-pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (arr[index]) + '</span>';
+		}
+		// formatFractionCurrent: addZero,
+		// formatFractionTotal: addZero
+	},
+	//Arrows
+	// navigation: {
+	// 	nextEl: '.ourfacilities__swiper-button-prev',
+	// 	prevEl: '.ourfacilities__swiper-button-next',
+	// },
+	/*
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1268: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+	*/
+	// on: {
+	// 	lazyImageReady: function () {
+	// 		ibg();
+	// 	},
+	// },
+	// And if we need scrollbar
+	// scrollbar: {
+	// 	el: '.swiper-scrollbar',
+	// 	draggable: true,
+	// 	dragSize: 40
+	// },
+});
+
 
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
@@ -769,4 +909,5 @@ $(document).ready(function () {
 // 		$(this).removeClass('items__mask ')
 // 	});
 // });
+
 

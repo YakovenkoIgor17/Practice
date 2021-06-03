@@ -300,7 +300,7 @@ body {
 		position: relative;
 	}
 	.swiper-button-prev {
-		transition: all .5s;
+		transition: all 0.5s;
 		position: absolute;
 		top: -76px;
 		right: 141px;
@@ -319,7 +319,7 @@ body {
 		}
 	}
 	.swiper-button-next {
-		transition: all .5s;
+		transition: all 0.5s;
 		position: absolute;
 		top: -73px;
 		right: -1px;
@@ -344,8 +344,6 @@ body {
 		background: transparent;
 	}
 	.swiper-pagination-bullet {
-		width: 40px;
-		height: 4px;
 		display: inline-block;
 		background: #000;
 		opacity: 0.2;
@@ -509,16 +507,195 @@ body {
 	}
 }
 
-// .whyfrispes {
-// }
-// .whyfrispes-card-container {
-// }
-// .whyfrispes-btn {
-// 	background-color: red;
-// 	&:hover {
-// 		background-color: blue;
-// 		+ .whyfrispes-card {
-// 			width: 400px;
-// 		}
-// 	}
-// }
+// .whyfrispes====================================================
+.whyfrispes {
+	padding: 30px 0px 56px 0px;
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content-left {
+		flex: 0 1 50%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__items {
+		display: flex;
+		flex: 0 1 50%;
+	}
+
+	&__items-img {
+		margin-right: 24px;
+	}
+	&__items-content {
+		display: flex;
+		flex-direction: column;
+	}
+	&__items-num {
+		font-family: $subfont;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 32px;
+		color: #10375c;
+	}
+
+	&__items-text {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 26px;
+		color: #9a9a9a;
+	}
+
+	&__content-right {
+		flex: 0 1 50%;
+		background: #10375c;
+		padding: 54px;
+	}
+
+	&__presents {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+		margin-bottom: 8px;
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 73px;
+			height: 2px;
+			left: 281px;
+			top: 177px;
+			background: #fff;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+	}
+
+	&__title {
+		font-family: $subfont;
+		color: #fff;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 51px;
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+	}
+}
+
+// .ourfacilities====================================================
+.ourfacilities {
+	padding: 56px 0px 56px 0px;
+	&__presents {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #222831;
+		margin-bottom: 8px;
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 73px;
+			height: 2px;
+			left: 281px;
+			top: 177px;
+			background: #222831;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+	}
+
+	&__title {
+		max-width: 50%;
+		font-family: $subfont;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 51px;
+		color: #10375c;
+		margin-bottom: 56px;
+	}
+	&__ourfacilities__body {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__slider-body {
+		position: relative;
+		width: 49%;
+
+		.ourfacilities-swiper-pagination {
+			position: absolute;
+			margin: 6px 0;
+			text-align: center;
+			cursor: pointer;
+			background: transparent;
+			z-index: 10;
+			display: flex;
+		}
+		.swiper-pagination-bullet {
+			margin-right: 10px;
+			height: 72px;
+			width: 293px;
+			display: block;
+			text-align: left;
+			padding-left: 24px;
+			padding-top: 24px;
+			font-family: $mainfont;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 24px;
+			color: #222831;
+			&:hover {
+				background: #ff5722;
+				color: #fff;
+			}
+		}
+		.swiper-pagination-bullet-active {
+			background: #ff5722;
+			color: #fff;
+		}
+		.swiper-pagination-bullets {
+			display: flex;
+			flex-direction: column;
+			width: 40%;
+			height: 100%;
+			top: 15px;
+		}
+	}
+
+	&__slider {
+		min-width: 0;
+	}
+
+	&__slider-items {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__slider-img {
+		max-width: 70%;
+	}
+}
