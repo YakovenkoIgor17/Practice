@@ -121,6 +121,7 @@ let slider_about = new Swiper('.slider', {
 	// And if we need scrollbar
 	scrollbar: {
 		el: '.swiper-scrollbar',
+		draggable: true,
 		dragSize: 40
 	},
 });

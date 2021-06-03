@@ -121,6 +121,7 @@ let slider_about = new Swiper('.slider', {
 	// And if we need scrollbar
 	scrollbar: {
 		el: '.swiper-scrollbar',
+		draggable: true,
 		dragSize: 40
 	},
 });
@@ -753,4 +754,19 @@ animate({
 $(document).ready(function () {
 	$('select').niceSelect();
 });
+// $( document ).ready(function(){
+// 	$( "slider__items" ).hover(function(){ // задаем функцию при наведении курсора на элемент и при его отведении	
+// 	  $( this ).toggleClass( "opacity-1" ) // добавляем, или убираем класс у текущего элемента div
+// 	});
+//  });
+// $(function(){
+// let hov = $('slider__items');
+// hov.hover(
+// 	function() {
+// 		$(this).addClass('items__mask ')
+// 	},
+// 	function() {
+// 		$(this).removeClass('items__mask ')
+// 	});
+// });
 

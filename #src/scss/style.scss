@@ -300,6 +300,7 @@ body {
 		position: relative;
 	}
 	.swiper-button-prev {
+		transition: all .5s;
 		position: absolute;
 		top: -76px;
 		right: 141px;
@@ -318,6 +319,7 @@ body {
 		}
 	}
 	.swiper-button-next {
+		transition: all .5s;
 		position: absolute;
 		top: -73px;
 		right: -1px;
@@ -378,36 +380,51 @@ body {
 .slider {
 	margin-bottom: 50px;
 	padding-bottom: 40px;
-	.slider__items {
-		// position: absolute;
-		&::before {
-			content: url("../img/spaces-arrow.svg");
-			position: absolute;
-			display: block;
-			bottom: 73px;
-			left: 30px;
-			z-index: 2;
-		}
-		&::after {
-			content: "";
-			bottom: 49px;
-			left: 0px;
-			display: block;
-			position: absolute;
-			background-color: #ff5722;
-			width: 72px;
-			height: 72px;
+	.slider__items-hov {
+		transition: all 0.5s;
+		position: absolute;
+		bottom: 49px;
+		width: 72px;
+		height: 72px;
+		background-color: #ff5722;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: url("../img/spaces-arrow.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		a {
+			opacity: 0;
+			font-family: $mainfont;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 22px;
 			text-align: center;
-			z-index: 1;
+			color: #ffffff;
+			z-index: 3;
 		}
 		&:hover {
-			.items__mask {
+			width: 255px;
+			bottom: 0px;
+			background-position: 215px center;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 137%;
+				height: 653%;
+				background-color: transparent;
+				bottom: 0px;
+				right: -95px;
+			}
+			a {
+				transition: all 1s;
 				opacity: 1;
 			}
-			.item__mask-link {
-				width: 255px;
-				a {
-					display: block;
+			+ .slider__items {
+				.items__mask {
+					opacity: 1;
 				}
 			}
 		}
@@ -415,18 +432,6 @@ body {
 	&__items {
 		position: relative;
 		transition: all 0.5s;
-		// &::after {
-		// 	content: "";
-		// 	bottom: 49px;
-		// 	left: 0px;
-		// 	display: block;
-		// 	position: absolute;
-		// 	background-color: #FF5722;
-		// 	width: 72px;
-		// 	height: 72px;
-		// 	text-align: center;
-
-		// }
 		.items__mask {
 			z-index: 2;
 			transition: all 0.5s;
@@ -484,20 +489,11 @@ body {
 					top: 28px;
 					right: 30px;
 				}
-				a {
-					display: none;
-					font-family: $mainfont;
-					font-style: normal;
-					font-weight: bold;
-					font-size: 18px;
-					line-height: 22px;
-					text-align: center;
-					color: #ffffff;
-				}
 			}
 		}
 		img {
 			margin-bottom: 25px;
+			min-height: 420px;
 		}
 		span {
 			display: block;
