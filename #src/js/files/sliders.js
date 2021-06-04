@@ -199,7 +199,7 @@ let slider_new = new Swiper('.ourfacilities__slider', {
 	// },
 });
 
-let slider_new2 = new Swiper('.frispes_slider', {
+let slider_new2 = new Swiper('.frispesgallery__slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -209,8 +209,8 @@ let slider_new2 = new Swiper('.frispes_slider', {
 	*/
 	observer: true,
 	observeParents: true,
-	slidesPerView: 1,
-	spaceBetween: 0,
+	slidesPerView: 5,
+	spaceBetween: 30,
 	autoHeight: true,
 	speed: 800,
 	//touchRatio: 0,
@@ -219,21 +219,21 @@ let slider_new2 = new Swiper('.frispes_slider', {
 	//preloadImages: false,
 	//lazy: true,
 	//Dotts
-	direction: "vertical",
-	pagination: {
-		el: '.ourfacilities-swiper-pagination',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + (arr[index]) + '</span>';
-		}
-		// formatFractionCurrent: addZero,
-		// formatFractionTotal: addZero
-	},
-	//Arrows
-	// navigation: {
-	// 	nextEl: '.ourfacilities__swiper-button-prev',
-	// 	prevEl: '.ourfacilities__swiper-button-next',
+	// direction: "vertical",
+	// pagination: {
+	// 	el: '.ourfacilities-swiper-pagination',
+	// 	clickable: true,
+	// 	// renderBullet: function (index, className) {
+	// 	// 	return '<span class="' + className + '">' + (arr[index]) + '</span>';
+	// 	// }
+	// 	// formatFractionCurrent: addZero,
+	// 	// formatFractionTotal: addZero
 	// },
+	//Arrows
+	navigation: {
+		nextEl: '.frispesgallery__swiper-button-prev',
+		prevEl: '.frispesgallery__swiper-button-next',
+	},
 	/*
 	breakpoints: {
 		320: {
@@ -266,4 +266,72 @@ let slider_new2 = new Swiper('.frispes_slider', {
 	// 	draggable: true,
 	// 	dragSize: 40
 	// },
+});
+let slider_new3 = new Swiper('.customers__slider', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	spaceBetween: 30,
+	autoHeight: true,
+	speed: 800,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	//Dotts
+	// direction: "vertical",
+	// pagination: {
+	// 	el: '.ourfacilities-swiper-pagination',
+	// 	clickable: true,
+	// 	// renderBullet: function (index, className) {
+	// 	// 	return '<span class="' + className + '">' + (arr[index]) + '</span>';
+	// 	// }
+	// 	// formatFractionCurrent: addZero,
+	// 	// formatFractionTotal: addZero
+	// },
+	//Arrows
+	navigation: {
+		nextEl: '.customers__swiper-button-prev',
+		prevEl: '.customers__swiper-button-next',
+	},
+	/*
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1268: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+	*/
+	// on: {
+	// 	lazyImageReady: function () {
+	// 		ibg();
+	// 	},
+	// },
+	// And if we need scrollbar
+	scrollbar: {
+		el: '.customers__swiper-scrollbar',
+		draggable: true,
+		dragSize: 40
+	},
 });

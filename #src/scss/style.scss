@@ -352,6 +352,10 @@ body {
 		background: #dd2c00;
 		opacity: 1;
 	}
+	.swiper-pagination-current {
+		color: #222831;
+		font-size: 23px;
+	}
 	.swiper-pagination-fraction {
 		font-size: 20px;
 		color: #9a9a9a;
@@ -365,10 +369,7 @@ body {
 		margin: 0 auto;
 		height: 5px;
 	}
-	.swiper-pagination-current {
-		color: #222831;
-		font-size: 23px;
-	}
+
 	.swiper-scrollbar-drag {
 		cursor: pointer;
 		background-color: #dd2c00;
@@ -507,7 +508,7 @@ body {
 	}
 }
 
-// .whyfrispes====================================================
+//whyfrispes====================================================
 .whyfrispes {
 	padding: 30px 0px 56px 0px;
 	&__body {
@@ -602,7 +603,7 @@ body {
 	}
 }
 
-// .ourfacilities====================================================
+//ourfacilities====================================================
 .ourfacilities {
 	padding: 56px 0px 56px 0px;
 	&__presents {
@@ -643,7 +644,7 @@ body {
 
 	&__slider-body {
 		position: relative;
-		width: 49%;
+		width: 100%;
 
 		.ourfacilities-swiper-pagination {
 			position: absolute;
@@ -685,7 +686,10 @@ body {
 			top: 15px;
 		}
 	}
-
+	._swiper.swiper-container-autoheight .swiper-wrapper {
+		align-items: center;
+		height: 453px !important;
+	}
 	&__slider {
 		min-width: 0;
 	}
@@ -697,5 +701,297 @@ body {
 
 	&__slider-img {
 		max-width: 70%;
+	}
+}
+
+//frispesgallery====================================================
+.frispesgallery {
+	padding: 56px 0px;
+	&__body {
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__presents {
+		width: 43%;
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #222831;
+		margin-bottom: 8px;
+		align-self: flex-end;
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 73px;
+			height: 2px;
+			left: 281px;
+			top: 177px;
+			background: #222831;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+	}
+
+	&__title {
+		font-family: $subfont;
+		color: #10375c;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 51px;
+		margin-bottom: 56px;
+		align-self: flex-end;
+	}
+
+	&__slider-wrapper {
+		margin-top: 56px;
+		position: relative;
+	}
+
+	&__slider {
+	}
+
+	&__slider-item {
+		img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+			height: 350px;
+		}
+	}
+
+	.frispesgallery__swiper-button-prev {
+		transition: all 0.5s;
+		position: absolute;
+		top: -76px;
+		right: 780px;
+		width: 100px;
+		height: 30px;
+		background-image: url("../img/arrow-active.svg");
+		background-repeat: no-repeat;
+		transform: rotate(180deg);
+		&.swiper-button-disabled {
+			background-image: url("../img/arrow-nonactive.svg");
+			width: 80px;
+			height: 30px;
+			top: -73px;
+			right: 767px;
+			transform: rotate(0deg);
+		}
+	}
+	.frispesgallery__swiper-button-next {
+		transition: all 0.5s;
+		position: absolute;
+		top: -73px;
+		right: 650px;
+		cursor: pointer;
+		width: 100px;
+		height: 30px;
+		background-image: url("../img/arrow-active.svg");
+		background-repeat: no-repeat;
+		&.swiper-button-disabled {
+			top: -75px;
+			right: 694px;
+			background-image: url("../img/arrow-nonactive.svg");
+			transform: rotate(180deg);
+		}
+	}
+}
+
+//whouses====================================================
+.whouses {
+	padding: 56px 0px;
+	&__content-text {
+		text-align: center;
+	}
+	&__title {
+		font-family: $subfont;
+		color: #0d2c4a;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 51px;
+		margin-bottom: 24px;
+	}
+	&__text {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 28px;
+		color: #9a9a9a;
+		margin-bottom: 56px;
+	}
+	&__content-company {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__company {
+	}
+}
+
+//customers====================================================
+.customers {
+	padding: 56px 0;
+	&__content-text {
+	}
+
+	&__presents {
+		width: 43%;
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #222831;
+		margin-bottom: 8px;
+		align-self: flex-end;
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 73px;
+			height: 2px;
+			left: 281px;
+			top: 177px;
+			background: #222831;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+	}
+
+	&__title {
+		font-family: $subfont;
+		color: #10375c;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 51px;
+		margin-bottom: 56px;
+	}
+
+	&__slider-wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	&__slider {
+		margin-bottom: 32px;
+	}
+
+	&__slider-item {
+		background: #10375c;
+		padding: 47px 40px 35px;
+		width: 445px !important;
+		display: flex;
+		flex-direction: column;
+		height: 393px;
+	}
+
+	&__slider-text {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 26px;
+		color: #fff;
+		flex: 1 1 auto;
+	}
+
+	&__slider-users {
+		display: flex;
+
+	}
+
+	&__slider-img {
+		margin-right: 16px;
+	}
+
+	&__slider-user {
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	&__slider-name {
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 28px;
+		color: #fff;
+	}
+
+	&__slider-profession {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 26px;
+		font-family: $mainfont;
+		color: #fff;
+	}
+	.customers__swiper-button-prev {
+		transition: all 0.5s;
+		position: absolute;
+		top: -73px;
+		right: 650px;
+		cursor: pointer;
+		width: 100px;
+		height: 30px;
+		background-image: url("../img/arrow-active.svg");
+		background-repeat: no-repeat;
+		&.swiper-button-disabled {
+			top: -75px;
+			right: 694px;
+			background-image: url("../img/arrow-nonactive.svg");
+			transform: rotate(180deg);
+		}
+		
+	}
+	.customers__swiper-button-next {
+		transition: all 0.5s;
+		position: absolute;
+		top: -76px;
+		right: 780px;
+		width: 100px;
+		height: 30px;
+		background-image: url("../img/arrow-active.svg");
+		background-repeat: no-repeat;
+		transform: rotate(180deg);
+		&.swiper-button-disabled {
+			background-image: url("../img/arrow-nonactive.svg");
+			width: 80px;
+			height: 30px;
+			top: -73px;
+			right: 767px;
+			transform: rotate(0deg);
+		}
+	}
+
+	.swiper-pagination-fraction {
+		font-size: 20px;
+		color: #9a9a9a;
+		font-family: $mainfont;
+	}
+
+	.customers__swiper-scrollbar {
+		max-width: 160px !important;
+		width: 100%;
+		background: #dfdfdf;
+		margin: 0 auto;
+		height: 5px;
+	}
+
+	.swiper-scrollbar-drag {
+		cursor: pointer;
+		background-color: #dd2c00;
+		height: 100%;
 	}
 }
