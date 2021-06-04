@@ -302,6 +302,7 @@ body {
 	.swiper-button-prev {
 		transition: all 0.5s;
 		position: absolute;
+		cursor: pointer;
 		top: -76px;
 		right: 141px;
 		width: 100px;
@@ -754,9 +755,6 @@ body {
 		position: relative;
 	}
 
-	&__slider {
-	}
-
 	&__slider-item {
 		img {
 			display: block;
@@ -766,25 +764,6 @@ body {
 		}
 	}
 
-	.frispesgallery__swiper-button-prev {
-		transition: all 0.5s;
-		position: absolute;
-		top: -76px;
-		right: 780px;
-		width: 100px;
-		height: 30px;
-		background-image: url("../img/arrow-active.svg");
-		background-repeat: no-repeat;
-		transform: rotate(180deg);
-		&.swiper-button-disabled {
-			background-image: url("../img/arrow-nonactive.svg");
-			width: 80px;
-			height: 30px;
-			top: -73px;
-			right: 767px;
-			transform: rotate(0deg);
-		}
-	}
 	.frispesgallery__swiper-button-next {
 		transition: all 0.5s;
 		position: absolute;
@@ -796,10 +775,32 @@ body {
 		background-image: url("../img/arrow-active.svg");
 		background-repeat: no-repeat;
 		&.swiper-button-disabled {
+			cursor: default;
 			top: -75px;
 			right: 694px;
 			background-image: url("../img/arrow-nonactive.svg");
 			transform: rotate(180deg);
+		}
+	}
+	.frispesgallery__swiper-button-prev {
+		transition: all 0.5s;
+		position: absolute;
+		cursor: pointer;
+		top: -76px;
+		right: 780px;
+		width: 100px;
+		height: 30px;
+		background-image: url("../img/arrow-active.svg");
+		background-repeat: no-repeat;
+		transform: rotate(180deg);
+		&.swiper-button-disabled {
+			cursor: default;
+			background-image: url("../img/arrow-nonactive.svg");
+			width: 80px;
+			height: 30px;
+			top: -73px;
+			right: 767px;
+			transform: rotate(0deg);
 		}
 	}
 }
@@ -841,9 +842,6 @@ body {
 //customers====================================================
 .customers {
 	padding: 56px 0;
-	&__content-text {
-	}
-
 	&__presents {
 		width: 43%;
 		font-family: $mainfont;
@@ -880,6 +878,8 @@ body {
 	&__slider-wrapper {
 		position: relative;
 		width: 100%;
+		max-width: 1500px;
+		margin-left: auto;
 	}
 
 	&__slider {
@@ -889,7 +889,7 @@ body {
 	&__slider-item {
 		background: #10375c;
 		padding: 47px 40px 35px;
-		width: 445px !important;
+		// width: 445px !important;
 		display: flex;
 		flex-direction: column;
 		height: 393px;
@@ -907,7 +907,6 @@ body {
 
 	&__slider-users {
 		display: flex;
-
 	}
 
 	&__slider-img {
@@ -917,7 +916,6 @@ body {
 	&__slider-user {
 		display: flex;
 		flex-direction: column;
-		
 	}
 
 	&__slider-name {
@@ -937,40 +935,42 @@ body {
 		font-family: $mainfont;
 		color: #fff;
 	}
-	.customers__swiper-button-prev {
+	.customers__swiper-button-next {
 		transition: all 0.5s;
 		position: absolute;
 		top: -73px;
-		right: 650px;
+		right: 314px;
 		cursor: pointer;
 		width: 100px;
 		height: 30px;
 		background-image: url("../img/arrow-active.svg");
 		background-repeat: no-repeat;
 		&.swiper-button-disabled {
+			cursor: default;
 			top: -75px;
-			right: 694px;
+			right: 340px;
 			background-image: url("../img/arrow-nonactive.svg");
 			transform: rotate(180deg);
 		}
-		
 	}
-	.customers__swiper-button-next {
+	.customers__swiper-button-prev {
 		transition: all 0.5s;
 		position: absolute;
+		cursor: pointer;
 		top: -76px;
-		right: 780px;
+		right: 425px;
 		width: 100px;
 		height: 30px;
 		background-image: url("../img/arrow-active.svg");
 		background-repeat: no-repeat;
 		transform: rotate(180deg);
 		&.swiper-button-disabled {
+			cursor: default;
 			background-image: url("../img/arrow-nonactive.svg");
 			width: 80px;
 			height: 30px;
 			top: -73px;
-			right: 767px;
+			right: 425px;
 			transform: rotate(0deg);
 		}
 	}
@@ -987,6 +987,8 @@ body {
 		background: #dfdfdf;
 		margin: 0 auto;
 		height: 5px;
+		position: absolute;
+		left: 510px;
 	}
 
 	.swiper-scrollbar-drag {

@@ -231,8 +231,8 @@ let slider_new2 = new Swiper('.frispesgallery__slider', {
 	// },
 	//Arrows
 	navigation: {
-		nextEl: '.frispesgallery__swiper-button-prev',
-		prevEl: '.frispesgallery__swiper-button-next',
+		nextEl: '.frispesgallery__swiper-button-next',
+		prevEl: '.frispesgallery__swiper-button-prev',
 	},
 	/*
 	breakpoints: {
@@ -299,8 +299,8 @@ let slider_new3 = new Swiper('.customers__slider', {
 	// },
 	//Arrows
 	navigation: {
-		nextEl: '.customers__swiper-button-prev',
-		prevEl: '.customers__swiper-button-next',
+		nextEl: '.customers__swiper-button-next',
+		prevEl: '.customers__swiper-button-prev',
 	},
 	/*
 	breakpoints: {

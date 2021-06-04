@@ -1325,6 +1325,7 @@ body.ie ._ibg img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   position: absolute;
+  cursor: pointer;
   top: -76px;
   right: 141px;
   width: 100px;
@@ -1896,33 +1897,6 @@ body.ie ._ibg img {
   height: 350px;
 }
 
-.frispesgallery .frispesgallery__swiper-button-prev {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  position: absolute;
-  top: -76px;
-  right: 780px;
-  width: 100px;
-  height: 30px;
-  background-image: url("../img/arrow-active.svg");
-  background-repeat: no-repeat;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.frispesgallery .frispesgallery__swiper-button-prev.swiper-button-disabled {
-  background-image: url("../img/arrow-nonactive.svg");
-  width: 80px;
-  height: 30px;
-  top: -73px;
-  right: 767px;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
 .frispesgallery .frispesgallery__swiper-button-next {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -1938,12 +1912,42 @@ body.ie ._ibg img {
 }
 
 .frispesgallery .frispesgallery__swiper-button-next.swiper-button-disabled {
+  cursor: default;
   top: -75px;
   right: 694px;
   background-image: url("../img/arrow-nonactive.svg");
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.frispesgallery .frispesgallery__swiper-button-prev {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  cursor: pointer;
+  top: -76px;
+  right: 780px;
+  width: 100px;
+  height: 30px;
+  background-image: url("../img/arrow-active.svg");
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.frispesgallery .frispesgallery__swiper-button-prev.swiper-button-disabled {
+  cursor: default;
+  background-image: url("../img/arrow-nonactive.svg");
+  width: 80px;
+  height: 30px;
+  top: -73px;
+  right: 767px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .whouses {
@@ -2028,6 +2032,8 @@ body.ie ._ibg img {
 .customers__slider-wrapper {
   position: relative;
   width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
 }
 
 .customers__slider {
@@ -2037,7 +2043,6 @@ body.ie ._ibg img {
 .customers__slider-item {
   background: #10375c;
   padding: 47px 40px 35px;
-  width: 445px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2098,13 +2103,13 @@ body.ie ._ibg img {
   color: #fff;
 }
 
-.customers .customers__swiper-button-prev {
+.customers .customers__swiper-button-next {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
   position: absolute;
   top: -73px;
-  right: 650px;
+  right: 314px;
   cursor: pointer;
   width: 100px;
   height: 30px;
@@ -2112,22 +2117,24 @@ body.ie ._ibg img {
   background-repeat: no-repeat;
 }
 
-.customers .customers__swiper-button-prev.swiper-button-disabled {
+.customers .customers__swiper-button-next.swiper-button-disabled {
+  cursor: default;
   top: -75px;
-  right: 694px;
+  right: 340px;
   background-image: url("../img/arrow-nonactive.svg");
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.customers .customers__swiper-button-next {
+.customers .customers__swiper-button-prev {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
   position: absolute;
+  cursor: pointer;
   top: -76px;
-  right: 780px;
+  right: 425px;
   width: 100px;
   height: 30px;
   background-image: url("../img/arrow-active.svg");
@@ -2137,12 +2144,13 @@ body.ie ._ibg img {
           transform: rotate(180deg);
 }
 
-.customers .customers__swiper-button-next.swiper-button-disabled {
+.customers .customers__swiper-button-prev.swiper-button-disabled {
+  cursor: default;
   background-image: url("../img/arrow-nonactive.svg");
   width: 80px;
   height: 30px;
   top: -73px;
-  right: 767px;
+  right: 425px;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -2160,6 +2168,8 @@ body.ie ._ibg img {
   background: #dfdfdf;
   margin: 0 auto;
   height: 5px;
+  position: absolute;
+  left: 510px;
 }
 
 .customers .swiper-scrollbar-drag {
