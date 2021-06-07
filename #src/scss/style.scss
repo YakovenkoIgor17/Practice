@@ -102,7 +102,10 @@ body {
 .introducing {
 	&__content {
 		display: flex;
-		
+		flex-wrap: wrap;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
 	}
 
 	&__content-titles {
@@ -140,6 +143,13 @@ body {
 		span {
 			color: #dd2c00;
 		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+			// text-align: center;
+			font-size: 35px;
+			line-height: 40px;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__text {
@@ -151,6 +161,9 @@ body {
 		font-size: 20px;
 		line-height: 30px;
 		color: #6a6a6a;
+		@media (max-width: $md3+px) {
+			margin-bottom: 30px;
+		}
 	}
 }
 //selectbanner===============================================
@@ -161,11 +174,17 @@ body {
 		padding: 65px 0px 65px 0px;
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		position: relative;
 		background-image: url("../img/top-banner.png");
 		background-size: 63%;
 		background-position: right -58px;
 		background-repeat: no-repeat;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+			background-size: 0%;
+			padding: 0 15px;
+		}
 	}
 
 	&__form {
@@ -174,6 +193,9 @@ body {
 		max-width: 100%;
 		background: #10375c;
 		padding: 42px 40px 31px;
+		@media (max-width: $md3+px) {
+			width: 100%;
+		}
 	}
 	&__form-title {
 		font-family: $subfont;
@@ -275,6 +297,9 @@ body {
 	&__content {
 		margin-bottom: 56px;
 		display: flex;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
 	}
 
 	&__title {
@@ -285,6 +310,10 @@ body {
 		font-size: 40px;
 		line-height: 51px;
 		color: #10375c;
+		@media (max-width: $md3+px) {
+			text-align: center;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__text {
@@ -295,6 +324,9 @@ body {
 		font-size: 18px;
 		line-height: 28px;
 		color: #9a9a9a;
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
 	}
 
 	&__slide {
@@ -320,6 +352,9 @@ body {
 			right: 117px;
 			transform: rotate(0deg);
 		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
 	}
 	.swiper-button-next {
 		transition: all 0.5s;
@@ -336,6 +371,9 @@ body {
 			right: 41px;
 			background-image: url("../img/arrow-nonactive.svg");
 			transform: rotate(180deg);
+		}
+		@media (max-width: $md3+px) {
+			display: none;
 		}
 	}
 	.swiper-pagination {
@@ -521,22 +559,37 @@ body {
 			flex-direction: column;
 		}
 	}
-
 	&__content-left {
 		flex: 0 1 50%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: $md3+px) {
+			align-items: flex-start;
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__items {
 		display: flex;
 		flex: 0 1 50%;
+		@media (max-width: 359px) {
+			flex: 0 1 60%;
+		}
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
 	}
-
 	&__items-img {
 		margin-right: 24px;
+		width: 32px;
+		@media (max-width: $md3+px) {
+			margin-right: 10px;
+		}
 	}
 	&__items-content {
 		display: flex;
@@ -548,6 +601,9 @@ body {
 		font-weight: normal;
 		font-size: 32px;
 		color: #10375c;
+		@media (max-width: $md3+px) {
+			font-size: 18px;
+		}
 	}
 
 	&__items-text {
@@ -557,12 +613,20 @@ body {
 		font-size: 16px;
 		line-height: 26px;
 		color: #9a9a9a;
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+		}
 	}
 
 	&__content-right {
 		flex: 0 1 50%;
 		background: #10375c;
 		padding: 54px;
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+			width: 100%;
+			padding: 15px;
+		}
 	}
 
 	&__presents {
@@ -594,6 +658,10 @@ body {
 		font-size: 40px;
 		line-height: 51px;
 		margin-bottom: 24px;
+		@media (max-width: $md3+px) {
+			font-size: 35px;
+			line-height: 40px;
+		}
 	}
 
 	&__text {
@@ -639,10 +707,18 @@ body {
 		line-height: 51px;
 		color: #10375c;
 		margin-bottom: 56px;
+		@media (max-width: $md2+px) {
+			max-width: 100%;
+			font-size: 35px;
+			line-height: 40px;
+		}
 	}
 	&__ourfacilities__body {
 		display: flex;
 		justify-content: flex-end;
+		@media (max-width: $md2+px) {
+			width: 100%;
+		}
 	}
 
 	&__slider-body {
@@ -657,6 +733,9 @@ body {
 			background: transparent;
 			z-index: 10;
 			display: flex;
+			@media (max-width: $md2+px) {
+				display: none;
+			}
 		}
 		.swiper-pagination-bullet {
 			margin-right: 10px;
@@ -700,19 +779,23 @@ body {
 	&__slider-items {
 		display: flex;
 		justify-content: flex-end;
+		@media (max-width: $md2+px) {
+			justify-content: center;
+			width: 100%;
+		}
 	}
 
 	&__slider-img {
 		max-width: 70%;
+		@media (max-width: $md2+px) {
+			max-width: 100%;
+		}
 	}
 }
 
 //frispesgallery====================================================
 .frispesgallery {
 	padding: 56px 0px;
-	&__body {
-	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -739,6 +822,10 @@ body {
 			vertical-align: middle;
 			margin-left: 15px;
 		}
+		@media (max-width: $md2+px) {
+			align-self: flex-start;
+			width: 100%;
+		}
 	}
 
 	&__title {
@@ -750,6 +837,12 @@ body {
 		line-height: 51px;
 		margin-bottom: 56px;
 		align-self: flex-end;
+		@media (max-width: $md2+px) {
+			font-size: 35px;
+			line-height: 40px;
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__slider-wrapper {
@@ -767,6 +860,9 @@ body {
 	}
 
 	.frispesgallery__swiper-button-next {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
 		transition: all 0.5s;
 		position: absolute;
 		top: -73px;
@@ -785,6 +881,9 @@ body {
 		}
 	}
 	.frispesgallery__swiper-button-prev {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
 		transition: all 0.5s;
 		position: absolute;
 		cursor: pointer;
@@ -810,6 +909,9 @@ body {
 //whouses====================================================
 .whouses {
 	padding: 56px 0px;
+	@media (max-width:$md2+px){
+		padding: 30px 0;
+	}
 	&__content-text {
 		text-align: center;
 	}
@@ -821,6 +923,11 @@ body {
 		font-size: 40px;
 		line-height: 51px;
 		margin-bottom: 24px;
+		@media (max-width: $md2+px) {
+			font-size: 35px;
+			line-height: 40px;
+			margin-bottom: 15px;
+		}
 	}
 	&__text {
 		font-family: $mainfont;
@@ -830,20 +937,32 @@ body {
 		line-height: 28px;
 		color: #9a9a9a;
 		margin-bottom: 56px;
+		@media (max-width: $md2+px) {
+			margin-bottom: 30px;
+		}
 	}
 	&__content-company {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+		}
 	}
 
 	&__company {
+		@media (max-width: $md2+px) {
+			margin-bottom: 30px;
+		}
 	}
 }
 
 //customers====================================================
 .customers {
 	padding: 56px 0;
+	@media (max-width:$md2+px){
+		padding: 30px 0;
+	}
 	&__presents {
 		width: 43%;
 		font-family: $mainfont;

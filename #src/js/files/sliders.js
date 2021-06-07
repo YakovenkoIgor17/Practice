@@ -92,7 +92,7 @@ let slider_about = new Swiper('.slider', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-	/*
+	
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -104,15 +104,15 @@ let slider_about = new Swiper('.slider', {
 			spaceBetween: 20,
 		},
 		992: {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 20,
 		},
-		1268: {
-			slidesPerView: 4,
+		1120: {
+			slidesPerView: 3,
 			spaceBetween: 30,
 		},
 	},
-	*/
+	
 	on: {
 		lazyImageReady: function () {
 			ibg();
@@ -209,7 +209,7 @@ let slider_new2 = new Swiper('.frispesgallery__slider', {
 	*/
 	observer: true,
 	observeParents: true,
-	slidesPerView: 5,
+	slidesPerView: 4,
 	spaceBetween: 30,
 	autoHeight: true,
 	speed: 800,
@@ -234,7 +234,7 @@ let slider_new2 = new Swiper('.frispesgallery__slider', {
 		nextEl: '.frispesgallery__swiper-button-next',
 		prevEl: '.frispesgallery__swiper-button-prev',
 	},
-	/*
+	
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -254,7 +254,7 @@ let slider_new2 = new Swiper('.frispesgallery__slider', {
 			spaceBetween: 30,
 		},
 	},
-	*/
+	
 	// on: {
 	// 	lazyImageReady: function () {
 	// 		ibg();
@@ -302,7 +302,7 @@ let slider_new3 = new Swiper('.customers__slider', {
 		nextEl: '.customers__swiper-button-next',
 		prevEl: '.customers__swiper-button-prev',
 	},
-	/*
+
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -322,7 +322,7 @@ let slider_new3 = new Swiper('.customers__slider', {
 			spaceBetween: 30,
 		},
 	},
-	*/
+
 	// on: {
 	// 	lazyImageReady: function () {
 	// 		ibg();

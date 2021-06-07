@@ -4,6 +4,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 		height: 145px;
 		@media (max-width:$md3+px){
 			
@@ -13,7 +14,7 @@
 .header-menu {
 	flex: 0 1 50.7%;
 	@media (max-width: $md3+px) {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: -100%;
 		width: 100%;
@@ -63,9 +64,9 @@
 }
 .login {
 	flex: 0 1 170px;
-	// @media (max-width:$md3+px){
+	@media (max-width:$md3+px){
 		
-	// }
+	}
 	&__list {
 		display: flex;
 		justify-content: space-between;
@@ -109,7 +110,7 @@
 	display: none;
 	@media (max-width: $md3+px) {
 		display: block;
-		position: absolute;
+		position: fixed;
 		top: 15px;
 		right: 15px;
 		width: 39px;
@@ -138,12 +139,12 @@
 				&:first-child {
 					transform: rotate(-45deg);
 					top: calc(50% - 1px);
-					background-color: #fff;
+					background-color: #ff5722;
 				}
 				&:last-child {
 					transform: rotate(45deg);
 					bottom: calc(50% - 1px);
-					background-color: #fff;
+					background-color: #ff5722;
 				}
 			}
 		}
