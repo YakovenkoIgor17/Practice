@@ -102,6 +102,7 @@ body {
 .introducing {
 	&__content {
 		display: flex;
+		
 	}
 
 	&__content-titles {
@@ -1290,7 +1291,7 @@ body {
 
 //member====================================================
 .member {
-	background: #10375C;
+	background: #10375c;
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -1309,6 +1310,18 @@ body {
 		line-height: 30px;
 		color: #f8f8f8;
 		font-family: $mainfont;
+		margin-bottom: 8px;
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 73px;
+			height: 2px;
+			left: 281px;
+			top: 177px;
+			background: #fff;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
 	}
 
 	&__title {
@@ -1318,6 +1331,7 @@ body {
 		font-size: 40px;
 		line-height: 51px;
 		color: #fff;
+		margin-bottom: 16px;
 	}
 
 	&__text {
@@ -1327,9 +1341,35 @@ body {
 		font-size: 20px;
 		line-height: 30px;
 		color: #dfdfdf;
+		margin-bottom: 33px;
 	}
 
 	&__btn {
+		background: #ff5722;
+		width: 100%;
+		max-width: 350px;
+		height: 51px;
+		font-family: $mainfont;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 28px;
+		border: 1px solid #ff5722;
+		transition: all 0.5s ease 0s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a {
+			color: #fff;
+		}
+		&:hover {
+			border-radius: 25px;
+			background: #fff;
+			color: #ff5722;
+			a {
+				color: #ff5722;
+			}
+		}
 	}
 
 	&__btn-link {
@@ -1346,5 +1386,16 @@ body {
 		flex: 0 1 50%;
 		justify-content: center;
 		align-items: flex-start;
+		position: relative;
+		img {
+			position: relative;
+			z-index: 12;
+		}
+		&::before {
+			content: url("../img/Pattern.png");
+			position: absolute;
+			bottom: -96px;
+			left: 71px;
+		}
 	}
 }
