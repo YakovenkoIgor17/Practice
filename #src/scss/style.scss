@@ -26,7 +26,7 @@ $subfont: "Lora";
 $minWidth: 320px;
 $maxWidth: 1920;
 $maxWidthContainer: 1140;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer + 15;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -124,8 +124,6 @@ body {
 			display: inline-block;
 			width: 73px;
 			height: 2px;
-			left: 281px;
-			top: 177px;
 			background: #222831;
 			vertical-align: middle;
 			margin-left: 15px;
@@ -186,11 +184,13 @@ body {
 			padding: 0 15px;
 		}
 	}
-
+	&__container {
+		width: 100%;
+	}
 	&__form {
 		display: flex;
 		flex-direction: column;
-		max-width: 100%;
+		max-width: 445px;
 		background: #10375c;
 		padding: 42px 40px 31px;
 		@media (max-width: $md3+px) {
@@ -291,9 +291,6 @@ body {
 //Our Spaces==================================================
 .slidespaces {
 	padding: 56px 0px 112px 0px;
-	&__body {
-	}
-
 	&__content {
 		margin-bottom: 56px;
 		display: flex;
@@ -642,8 +639,6 @@ body {
 			display: inline-block;
 			width: 73px;
 			height: 2px;
-			left: 281px;
-			top: 177px;
 			background: #fff;
 			vertical-align: middle;
 			margin-left: 15px;
@@ -690,8 +685,6 @@ body {
 			display: inline-block;
 			width: 73px;
 			height: 2px;
-			left: 281px;
-			top: 177px;
 			background: #222831;
 			vertical-align: middle;
 			margin-left: 15px;
@@ -816,8 +809,6 @@ body {
 			display: inline-block;
 			width: 73px;
 			height: 2px;
-			left: 281px;
-			top: 177px;
 			background: #222831;
 			vertical-align: middle;
 			margin-left: 15px;
@@ -848,6 +839,9 @@ body {
 	&__slider-wrapper {
 		margin-top: 56px;
 		position: relative;
+		@media (max-width: $md3+px) {
+			padding: 0 15px;
+		}
 	}
 
 	&__slider-item {
@@ -909,7 +903,7 @@ body {
 //whouses====================================================
 .whouses {
 	padding: 56px 0px;
-	@media (max-width:$md2+px){
+	@media (max-width: $md2+px) {
 		padding: 30px 0;
 	}
 	&__content-text {
@@ -960,7 +954,7 @@ body {
 //customers====================================================
 .customers {
 	padding: 56px 0;
-	@media (max-width:$md2+px){
+	@media (max-width: $md2+px) {
 		padding: 30px 0;
 	}
 	&__presents {
@@ -978,11 +972,12 @@ body {
 			display: inline-block;
 			width: 73px;
 			height: 2px;
-			left: 281px;
-			top: 177px;
 			background: #222831;
 			vertical-align: middle;
 			margin-left: 15px;
+		}
+		@media (max-width: $md3+px) {
+			width: 100%;
 		}
 	}
 
@@ -994,6 +989,10 @@ body {
 		font-size: 40px;
 		line-height: 51px;
 		margin-bottom: 56px;
+		@media (max-width: $md3+px) {
+			font-size: 35px;
+			line-height: 40px;
+		}
 	}
 
 	&__slider-wrapper {
@@ -1001,6 +1000,9 @@ body {
 		width: 100%;
 		max-width: 1500px;
 		margin-left: auto;
+		@media (max-width: $md2+px) {
+			padding: 0 15px;
+		}
 	}
 
 	&__slider {
@@ -1010,10 +1012,12 @@ body {
 	&__slider-item {
 		background: #10375c;
 		padding: 47px 40px 35px;
-		// width: 445px !important;
 		display: flex;
 		flex-direction: column;
-		height: 393px;
+		min-height: 393px;
+		@media (max-width: $md1+px) {
+			padding: 28px 30px 28px;
+		}
 	}
 
 	&__slider-text {
@@ -1073,6 +1077,9 @@ body {
 			background-image: url("../img/arrow-nonactive.svg");
 			transform: rotate(180deg);
 		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
 	}
 	.customers__swiper-button-prev {
 		transition: all 0.5s;
@@ -1094,6 +1101,9 @@ body {
 			right: 410px;
 			transform: rotate(0deg);
 		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
 	}
 
 	.swiper-pagination-fraction {
@@ -1103,6 +1113,9 @@ body {
 	}
 
 	.customers__swiper-scrollbar {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
 		max-width: 160px !important;
 		width: 100%;
 		background: #dfdfdf;
@@ -1122,9 +1135,6 @@ body {
 //helpcenter====================================================
 .helpcenter {
 	padding: 56px 0;
-	&__body {
-	}
-
 	&__title {
 		font-family: $subfont;
 		font-style: normal;
@@ -1136,12 +1146,23 @@ body {
 		max-width: 578px;
 		margin: 0 auto;
 		margin-bottom: 51px;
+		@media (max-width: $md3+px) {
+			font-size: 35px;
+			line-height: 40px;
+		}
 	}
 
 	&__cards {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		flex: 0 1 33.333%;
+		@media (max-width: $md2+px) {
+			justify-content: center;
+		}
+		@media (min-width: 992px) {
+			flex-wrap: nowrap;
+		}
 	}
 
 	&__cards-wrapper {
@@ -1150,8 +1171,12 @@ body {
 		box-shadow: 0px 0px 24px 7px rgba(223, 223, 223, 0.5);
 		position: relative;
 		margin-bottom: 64px;
-		width: 350px;
-		height: 171px;
+		width: 100%;
+		max-width: 350px;
+		min-height: 171px;
+		@media (max-width: $md1+px) {
+			margin: 0 8px 64px;
+		}
 	}
 	&__cards-item {
 		height: 171px;
@@ -1257,8 +1282,10 @@ body {
 	padding: 60px 0 76px;
 	&__content-text {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
-		// align-items: center;
+		// @media (max-width: $md3+px) {
+		// }
 	}
 
 	&__title {
@@ -1269,8 +1296,12 @@ body {
 		line-height: 51px;
 		color: #10375c;
 		margin-bottom: 56px;
+		@media (max-width: $md3+px) {
+			margin-bottom: 20px;
+			font-size: 35px;
+			line-height: 40px;
+		}
 	}
-
 	&__link {
 		a {
 			position: relative;
@@ -1309,37 +1340,64 @@ body {
 			}
 		}
 	}
-
-	&__cards-top {
+	&__cards-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__cards-content {
 		display: flex;
 		margin-bottom: 30px;
-	}
 
-	&__cards-itemb {
-		display: flex;
-		background-color: #fff;
-		margin-right: 15px;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
 	}
-
-	&__cards-item {
+	.cards__item-big {
 		display: flex;
 		flex-direction: column;
+		padding: 0 32px;
+		width: 100%;
+		max-width: 380px;
+		margin-right: 15px;
+		background-color: #fff;
+		@media (max-width: $md4+px) {
+			padding: 0 15px;
+			margin-right: 0px;
+			width: 100%;
+			max-width: 350px;
+		}
+	}
+	&__cards-item {
+		width: 100%;
+		max-width: 350px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 30px;
 		margin-left: 15px;
 		margin-right: 15px;
 		background-color: #fff;
 		&:first-child {
-			margin-left: 0;
+			margin: 0;
 		}
 		&:last-child {
 			margin-right: 0;
 		}
-	}
-
-	.img__card {
-		margin-bottom: 14px;
-	}
-	&__cards-content {
-		padding: 32px;
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+		&:nth-child(3) {
+			margin-left: 0;
+		}
+		img {
+			@media (max-width: $md4+px) {
+				width: 100%;
+			}
+		}
+		@media (max-width: $md3+px) {
+			margin-right: 0;
+			margin-left: 0;
+			width: 100%;
+		}
 	}
 
 	&__cards-title {
@@ -1347,9 +1405,10 @@ body {
 		font-style: normal;
 		font-weight: bold;
 		font-size: 32px;
-		line-height: 41px;
+		line-height: 36px;
 		color: #222831;
-		margin-bottom: 24px;
+		margin-top: 14px;
+		margin-bottom: 17px;
 	}
 	.title__cards {
 		font-family: $subfont;
@@ -1359,7 +1418,7 @@ body {
 		line-height: 28px;
 		color: #222831;
 		margin-bottom: 4px;
-		padding-left: 16px;
+		padding: 0 16px;
 	}
 	&__cards-text {
 		font-family: $mainfont;
@@ -1372,12 +1431,6 @@ body {
 	}
 	.text__cards {
 		padding-left: 16px;
-	}
-	&__cards-wrapper {
-		img {
-			margin-right: 24px;
-		}
-		display: flex;
 	}
 
 	&__cards-user {
@@ -1399,12 +1452,17 @@ body {
 		font-style: normal;
 		font-weight: normal;
 		font-size: 16px;
-		line-height: 26px;
+		line-height: 21px;
 		color: #9a9a9a;
 	}
 
 	&__cards-bottom {
 		display: flex;
+		.card-replace {
+			@media (max-width: 1110px) {
+				// display: block;
+			}
+		}
 	}
 }
 
@@ -1435,8 +1493,6 @@ body {
 			display: inline-block;
 			width: 73px;
 			height: 2px;
-			left: 281px;
-			top: 177px;
 			background: #fff;
 			vertical-align: middle;
 			margin-left: 15px;
@@ -1510,11 +1566,11 @@ body {
 			position: relative;
 			z-index: 12;
 		}
-		&::before {
-			content: url("../img/Pattern.png");
-			position: absolute;
-			bottom: -96px;
-			left: 71px;
-		}
+		// &::before {
+		// 	content: url("../img/Pattern.png");
+		// 	position: absolute;
+		// 	bottom: -96px;
+		// 	left: 71px;
+		// }
 	}
 }

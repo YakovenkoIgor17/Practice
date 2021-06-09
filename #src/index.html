@@ -27,34 +27,35 @@
 			</section>
 			<!-- selectbanner---------------------------------------------------------------------->
 			<section class="selectbanner">
-				<div class="selectbanner__body ">
-					<div class="selectbanner__form _container">
-						<div class="selectbanner__form-title">
-							Find your space now
+				<div class="selectbanner__body">
+					<div class="selectbanner__container _container">
+						<div class="selectbanner__form">
+							<div class="selectbanner__form-title">
+								Find your space now
+							</div>
+							<form action="#" method="post">
+								<select class="wide select_label1">
+									<option id="1">Malang, Indonesia</option>
+									<option value="">Kiyv,Ukraine</option>
+									<option value="">London,UK</option>
+									<option value="">Barselona,Spain</option>
+								</select>
+								<select class="wide select_label2">
+									<option>Private Office</option>
+									<option>Home</option>
+									<option>Outdoor</option>
+									<option>Inside</option>
+								</select>
+								<select class="wide select_label3">
+									<option>9 May 2020</option>
+									<option>10 June 2020</option>
+									<option>11 Julay 2020</option>
+									<option>17 Aug 2020</option>
+								</select>
+								<button class="selectbanner__form-btn" type="submit">FIND MY SPACE</button>
+							</form>
 						</div>
-						<form action="#" method="post">
-							<select class="wide select_label1">
-								<option id="1">Malang, Indonesia</option>
-								<option value="">Kiyv,Ukraine</option>
-								<option value="">London,UK</option>
-								<option value="">Barselona,Spain</option>
-							</select>
-							<select class="wide select_label2">
-								<option>Private Office</option>
-								<option>Home</option>
-								<option>Outdoor</option>
-								<option>Inside</option>
-							</select>
-							<select class="wide select_label3">
-								<option>9 May 2020</option>
-								<option>10 June 2020</option>
-								<option>11 Julay 2020</option>
-								<option>17 Aug 2020</option>
-							</select>
-							<button class="selectbanner__form-btn" type="submit">FIND MY SPACE</button>
-						</form>
 					</div>
-					<div class="selectbanner__banner"></div>
 				</div>
 			</section>
 			<!-- slidespaces---------------------------------------------------------------------->
@@ -300,7 +301,7 @@
 						<div class="frispesgallery__presents">Frispes gallery</div>
 						<h2 class="frispesgallery__title">Immersive beautiful<br> co-working space gallery</h2>
 					</div>
-					<div class="frispesgallery__slider-wrapper _container">
+					<div class="frispesgallery__slider-wrapper">
 						<div class="frispesgallery__slider _swiper">
 							<div class="frispesgallery__slider-item">
 								<img src="img/gallery-slide1.png" alt="">
@@ -550,16 +551,19 @@
 						<h2 class="news__title">News, events and insights for you</h2>
 						<div class="news__link"><a href="#">See more</a></div>
 					</div>
-					<div class="news__cards-top">
-						<div class="news__cards-itemb">
-							<div class="news__cards-img">
-								<img src="img/events-image1.png" alt="">
+					<div class="news__cards-wrapper">
+						<div class="news__cards-content">
+							<div class="news__cards-item">
+								<img class="news__cards-img" src="img/events-image1.png" alt="">
 							</div>
-							<div class="news__cards-content">
-								<div class="news__cards-title">Google I / O 2020 news update</div>
+							<div class="cards__item-big">
+								<div class="news__cards-title">
+									Google I / O 2020 news update
+								</div>
 								<div class="news__cards-text">Out of concern for the health and safety of our developers,
-									employees, and local communities — and in line with recent ...</div>
-								<div class="news__cards-wrapper">
+									employees, and local communities — and in line with recent ...
+								</div>
+								<div class="news__cards-sundar">
 									<img src="img/sundar.png" alt="">
 									<div class="news__cards-user">
 										<span class="news__cards-name">Sundar pichai</span>
@@ -575,13 +579,12 @@
 							<div class="news__cards-title title__cards">Minimal workspace for inspirations</div>
 							<div class="news__cards-text text__cards">Anthony Masional</div>
 						</div>
-					</div>
-					<div class="news__cards-bottom">
 						<div class="news__cards-item">
 							<div class="news__cards-img img__card">
 								<img src="img/events-image3.png" alt="">
 							</div>
-							<div class="news__cards-title title__cards">Does productivity increase when working remotely ? </div>
+							<div class="news__cards-title title__cards">Does productivity increase when working remotely ?
+							</div>
 							<div class="news__cards-text text__cards">Franck Martin</div>
 						</div>
 						<div class="news__cards-item">
@@ -602,7 +605,7 @@
 				</div>
 			</section>
 
-			<!--member---------------------------------------------------------------------->
+			<!-- member---------------------------------------------------------------------->
 			<section class="member">
 				<div class="member__container _container">
 					<div class="member__content-sign">

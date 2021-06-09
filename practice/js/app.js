@@ -317,10 +317,6 @@ let slider_new3 = new Swiper('.customers__slider', {
 			slidesPerView: 3,
 			spaceBetween: 20,
 		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
 	},
 
 	// on: {
