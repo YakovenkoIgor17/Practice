@@ -1284,8 +1284,6 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		// @media (max-width: $md3+px) {
-		// }
 	}
 
 	&__title {
@@ -1343,11 +1341,19 @@ body {
 	&__cards-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		@media (max-width: $md3+px) {
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		@media (min-width: 760px) and (max-width: 1139px) {
+			flex-direction: row;
+			justify-content: center;
+		}
 	}
 	&__cards-content {
 		display: flex;
 		margin-bottom: 30px;
-
 		@media (max-width: $md3+px) {
 			flex-direction: column;
 		}
@@ -1360,11 +1366,14 @@ body {
 		max-width: 380px;
 		margin-right: 15px;
 		background-color: #fff;
-		@media (max-width: $md4+px) {
-			padding: 0 15px;
+		@media (max-width: 767px) {
+			padding: 0 15px 15px;
 			margin-right: 0px;
 			width: 100%;
 			max-width: 350px;
+		}
+		@media (min-width: 760px) and (max-width: 1139px) {
+			margin-right: 0;
 		}
 	}
 	&__cards-item {
@@ -1384,9 +1393,22 @@ body {
 		}
 		&:nth-child(2) {
 			margin-right: 0;
+			@media (min-width: 760px) and (max-width: 1139px) {
+				margin-right: 15px;
+				margin-left: 0;
+			}
 		}
 		&:nth-child(3) {
 			margin-left: 0;
+			@media (min-width: 760px) and (max-width: 1139px) {
+				margin-left: 15px;
+				margin-right: 0;
+			}
+		}
+		&:nth-child(4) {
+			@media (min-width: 760px) and (max-width: 1139px) {
+				margin-left: 0px;
+			}
 		}
 		img {
 			@media (max-width: $md4+px) {
@@ -1458,11 +1480,6 @@ body {
 
 	&__cards-bottom {
 		display: flex;
-		.card-replace {
-			@media (max-width: 1110px) {
-				// display: block;
-			}
-		}
 	}
 }
 
@@ -1472,12 +1489,25 @@ body {
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+			justify-content: center;
+			padding-top: 30px;
+		}
 	}
 	&__content-sign {
 		display: flex;
 		flex: 0 1 50%;
+		padding: 0px 110px 0px 0px;
 		flex-direction: column;
 		justify-content: center;
+		@media (max-width: $md3+px) {
+			align-items: center;
+			text-align: center;
+		}
+		@media (max-width: $md2+px) {
+			padding: 0;
+		}
 	}
 
 	&__presents {
@@ -1507,6 +1537,10 @@ body {
 		line-height: 51px;
 		color: #fff;
 		margin-bottom: 16px;
+		@media (max-width: $md3+px) {
+			font-size: 35px;
+			line-height: 40px;
+		}
 	}
 
 	&__text {
@@ -1566,11 +1600,16 @@ body {
 			position: relative;
 			z-index: 12;
 		}
-		// &::before {
-		// 	content: url("../img/Pattern.png");
-		// 	position: absolute;
-		// 	bottom: -96px;
-		// 	left: 71px;
-		// }
+		&::before {
+			content: url("../img/Pattern.png");
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			bottom: -96px;
+			left: 71px;
+			@media (max-width: $md2+px) {
+				display: none;
+			}
+		}
 	}
 }

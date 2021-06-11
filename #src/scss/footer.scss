@@ -7,10 +7,16 @@
 	padding: 56px 0 102px;
 	color: #fff;
 	font-family: $mainfont;
+	height: 100%;
 	&__content {
+
 		display: flex;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
 		> div {
 			flex: 1 1 25%;
+			padding-right: 15px;
 			&.footer__logo {
 				flex-basis: 50%;
 			}
@@ -20,6 +26,9 @@
 	&__logo {
 		img {
 			margin-bottom: 16px;
+		}
+		@media (max-width: $md3+px) {
+			border-bottom: 1px solid #fff;
 		}
 	}
 
@@ -31,12 +40,19 @@
 		line-height: 26px;
 		color: #f8f8f8;
 		opacity: 0.85;
+		@media (max-width: $md2+px) {
+			padding-right: 30px;
+		}
+		@media (min-width: $md2+px) {
+			padding-right: 97px;
+		}
 	}
 
 	&__social {
 		max-width: 104px;
 		display: flex;
 		justify-content: space-between;
+
 	}
 
 	&__spaces {
@@ -53,6 +69,10 @@
 	}
 
 	&__menu {
+		@media (max-width: $md3+px) {
+			padding-right: 15px;
+			border-bottom: 1px solid #fff;
+		}
 	}
 
 	&__menu-item {
@@ -73,7 +93,6 @@
 
 	&__company {
 		flex: 1 1 25%;
-		width: 100%;
 	}
 
 	&__support {
