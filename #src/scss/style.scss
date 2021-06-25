@@ -48,7 +48,7 @@ body {
 .wrapper {
 	width: 100%;
 	min-height: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	&._loaded {
@@ -1280,6 +1280,8 @@ body {
 //news====================================================
 .news {
 	padding: 60px 0 76px;
+	&__container {
+	}
 	&__content-text {
 		display: flex;
 		flex-wrap: wrap;
@@ -1341,87 +1343,71 @@ body {
 	&__cards-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0 -15px;
 		@media (max-width: $md3+px) {
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
+			margin: 0;
 		}
 		@media (min-width: 760px) and (max-width: 1139px) {
 			flex-direction: row;
 			justify-content: center;
 		}
 	}
-	&__cards-content {
-		display: flex;
-		margin-bottom: 30px;
-		@media (max-width: $md3+px) {
-			flex-direction: column;
-		}
-	}
 	.cards__item-big {
 		display: flex;
 		flex-direction: column;
 		padding: 0 32px;
-		width: 100%;
-		max-width: 380px;
 		margin-right: 15px;
 		background-color: #fff;
-		@media (max-width: 767px) {
-			padding: 0 15px 15px;
-			margin-right: 0px;
-			width: 100%;
-			max-width: 350px;
-		}
 		@media (min-width: 760px) and (max-width: 1139px) {
-			margin-right: 0;
 		}
 	}
 	&__cards-item {
-		width: 100%;
-		max-width: 350px;
+		width: calc(100% / 3 - 30px);
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 30px;
 		margin-left: 15px;
 		margin-right: 15px;
 		background-color: #fff;
-		&:first-child {
-			margin: 0;
+		.sunder__img {
+			width: 56px;
+			height: 56px;
 		}
-		&:last-child {
-			margin-right: 0;
-		}
-		&:nth-child(2) {
-			margin-right: 0;
-			@media (min-width: 760px) and (max-width: 1139px) {
-				margin-right: 15px;
-				margin-left: 0;
-			}
-		}
-		&:nth-child(3) {
-			margin-left: 0;
-			@media (min-width: 760px) and (max-width: 1139px) {
-				margin-left: 15px;
-				margin-right: 0;
-			}
-		}
-		&:nth-child(4) {
-			@media (min-width: 760px) and (max-width: 1139px) {
-				margin-left: 0px;
-			}
-		}
-		img {
-			@media (max-width: $md4+px) {
+		&.with-content {
+			display: flex;
+			flex-direction: row;
+			width: calc(66.66% - 30px);
+			@media (max-width: $md3+px) {
 				width: 100%;
+				flex-direction: column;
+				align-items: center;
+			}
+			@media (min-width: 760px) and (max-width: 1139px) {
+				width: calc(100% - 30px);
 			}
 		}
 		@media (max-width: $md3+px) {
-			margin-right: 0;
-			margin-left: 0;
+			width: 100%;
+			margin: 0px 0px 30px 0px;
+			img {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+	.item__card-news {
+		margin: 0;
+		width: 100%;
+	}
+	.img__card {
+		img {
 			width: 100%;
 		}
 	}
-
 	&__cards-title {
 		font-family: $subfont;
 		font-style: normal;
@@ -1476,6 +1462,9 @@ body {
 		font-size: 16px;
 		line-height: 21px;
 		color: #9a9a9a;
+		@media (max-width:$md3+px){
+			padding-bottom: 15px;
+		}
 	}
 
 	&__cards-bottom {
@@ -1599,6 +1588,11 @@ body {
 		img {
 			position: relative;
 			z-index: 12;
+		}
+		@media (max-width: $md3+px) {
+			img {
+				width: 100%;
+			}
 		}
 		&::before {
 			content: url("../img/Pattern.png");
